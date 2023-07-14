@@ -22,7 +22,6 @@ public class Voluntario {
     private String rol;
     private String contrasena;
     private String region;
-    @DBRef
     private List<Habilidad> habilidades;
 
     public LocalDate getFechaNacimiento() {
