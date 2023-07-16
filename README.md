@@ -64,7 +64,7 @@ Con esto ya estamos listos con todo lo que es la instalación del proyecto y se 
 ## Instrucciones de uso
 1. Utilizar el archivo Dump llamado desde la terminal ejecutandolo con el siguiente comando:
 ```sh
-mongorestore --db TBD --collection <nombre de la colección> <path del archivo .bson>
+mongorestore --db TBD ruta_dump
 ```
 2. Utilizando IntelliJ IDEA Ultimate, asegurarse de que se detecte correctamente Spring Boot y Gradle. Ejecutar la aplicación haciendo click en la opción "Run" dentro de IntelliJ IDEA.
 
