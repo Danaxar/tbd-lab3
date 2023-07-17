@@ -60,12 +60,27 @@ spring.data.mongodb.database=TBD
 Con esto ya estamos listos con todo lo que es la instalación del proyecto y se puede continuar a las instrucciones de uso.
 
 ## Instrucciones de uso
-1. Utilizar el archivo Dump llamado desde la terminal ejecutandolo con el siguiente comando:
-```sh
-mongorestore --db TBD ruta_dump
-```
-2. Utilizando IntelliJ IDEA Ultimate, asegurarse de que se detecte correctamente Spring Boot y Maven. Ejecutar la aplicación haciendo click en la opción "Run" dentro de IntelliJ IDEA.
+### Carga de datos: Utilizar el archivo Dump llamado "import.json" desde MongoDB Compass:
+Seleccionar la conexión a la base de datos
+!["MongoDBCompass"](Media/1.png)
+
+Crear una base de datos y una colección llamada voluntarios
+!["MongoDBCompass"](Media/2.png)
+
+Seleccionar añadir datos -> Importar un json
+!["MongoDBCompass"](Media/3.png)
+
+Seleccionar el archivo "import.json"
+!["MongoDBCompass"](Media/4.png)
+
+Confirmar
+!["MongoDBCompass"](Media/5.png)
+
+Y listo
+!["MongoDBCompass"](Media/6.png)
+
+👀: Utilizando IntelliJ IDEA Ultimate, asegurarse de que se detecte correctamente Spring Boot y Maven. Ejecutar la aplicación haciendo click en la opción "Run" dentro de IntelliJ IDEA.
 
 ¡Con esto ya tenemos el Backend listo para trabajar!
 
-3. Para probar el CRUD de una tabla, debemos colocar la ruta en Postman (Por ejemplo, **http://127.0.0.1:8080/voluntarios**). Luego seleccionar uno de los métodos a aplicar, dependiendo de si quieres crear, mostrar, editar o eliminar un elemento y lo mismo para los otros casos.
+* Para probar el CRUD de una tabla, debemos colocar la ruta en Postman (Por ejemplo, **http://127.0.0.1:8080/voluntarios**). Luego seleccionar uno de los métodos a aplicar, dependiendo de si quieres crear, mostrar, editar o eliminar un elemento y lo mismo para los otros casos.

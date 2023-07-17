@@ -12,9 +12,9 @@ import java.util.List;
 public class VoluntarioService {
     private final VoluntarioRepository voluntarioRepository;
 
-        public VoluntarioService(VoluntarioRepository voluntarioRepository) {
-            this.voluntarioRepository = voluntarioRepository;
-        }
+    public VoluntarioService(VoluntarioRepository voluntarioRepository) {
+        this.voluntarioRepository = voluntarioRepository;
+    }
 
     public List<Voluntario> getVoluntarios(){
         return voluntarioRepository.findAll();
@@ -38,21 +38,7 @@ public class VoluntarioService {
         for(Voluntario voluntario : voluntarios){
             totalHabilidades += voluntario.getHabilidades().size();
         }
-
         return totalHabilidades / (double) totalVoluntarios;
-
-        /*
-        // Opcion 2, sin repetir habilidades ya agregadas
-        List<Habilidad> habilidades = new ArrayList<>();
-        for(Voluntario voluntario : voluntarios){
-            for(Habilidad habilidad : voluntario.getHabilidades()){
-                if(!habilidades.contains(habilidad)){
-                    habilidades.add(habilidad);
-                }
-            }
-        }
-        return habilidades.size() / (double) totalVoluntarios;
-         */
     }
     public Integer getAllHabilidades() {
         List<Voluntario> voluntarios = voluntarioRepository.findAll();
